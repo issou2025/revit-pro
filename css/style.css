@@ -1,0 +1,1078 @@
+/* Variables */
+:root {
+    --primary-color: #0055A4;
+    --accent-color: #FFD700;
+    --text-color: #333333;
+    --light-text: #666666;
+    --background: #FFFFFF;
+    --light-background: #F5F7FA;
+    --border-color: #E1E4E8;
+    
+    /* Typography */
+    --heading-font: 'Poppins', sans-serif;
+    --body-font: 'Inter', sans-serif;
+    
+    /* Spacing */
+    --header-height: 4rem;
+    --section-spacing: 6rem;
+    --container-padding: 2rem;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* Header & Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--background);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav__list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav__link {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav__link.active {
+    color: var(--primary-color);
+}
+
+.nav__toggle,
+.nav__close {
+    display: none;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: 6rem;
+    background-color: var(--light-background);
+}
+
+.hero__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero__title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.hero__description {
+    font-size: 1.25rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+.hero__buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button--primary:hover {
+    background-color: #004483;
+    color: white;
+}
+
+.button--outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.button--outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button--secondary {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+
+.button--secondary:hover {
+    background-color: #E6C200;
+}
+
+/* Features Section */
+.section {
+    padding: var(--section-spacing) 0;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+}
+
+.features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.feature__card {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--light-background);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature__card:hover {
+    transform: translateY(-10px);
+}
+
+.feature__icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1.5rem;
+}
+
+.feature__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Benefits Section */
+.benefits__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.benefits__list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.benefits__list li {
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.benefits__list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Newsletter Section */
+.newsletter {
+    background-color: var(--light-background);
+}
+
+.newsletter__container {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.newsletter__form {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.newsletter__input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 0.5rem;
+    font-family: var(--body-font);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 4rem 0 2rem;
+}
+
+.footer__content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    margin-bottom: 3rem;
+}
+
+.footer__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.footer__title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer__group ul {
+    list-style: none;
+}
+
+.footer__group li {
+    margin-bottom: 0.5rem;
+}
+
+.footer__group a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__group a:hover {
+    color: var(--accent-color);
+}
+
+.footer__bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 968px) {
+    :root {
+        --header-height: 3.5rem;
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: var(--background);
+        padding: 3rem 2rem;
+        transition: right 0.3s ease;
+    }
+
+    .nav__menu.show-menu {
+        right: 0;
+    }
+
+    .nav__list {
+        flex-direction: column;
+        row-gap: 2.5rem;
+    }
+
+    .nav__toggle,
+    .nav__close {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .hero__container,
+    .benefits__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero__image {
+        order: -1;
+    }
+
+    .benefits__list {
+        text-align: left;
+    }
+
+    .newsletter__form {
+        flex-direction: column;
+    }
+
+    .footer__content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .section__title {
+        font-size: 1.8rem;
+    }
+
+    .features__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* About Hero Section */
+.about-hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    background-color: var(--light-background);
+}
+
+.about-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-hero__description {
+    font-size: 1.25rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+/* Timeline Section */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline__item {
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline__item:nth-child(odd) .timeline__content {
+    margin-left: auto;
+    margin-right: 4rem;
+}
+
+.timeline__item:nth-child(even) .timeline__content {
+    margin-right: auto;
+    margin-left: 4rem;
+}
+
+.timeline__content {
+    width: calc(50% - 2rem);
+    padding: 1.5rem;
+    background: var(--background);
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.timeline__content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.timeline__content::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline__item:nth-child(odd) .timeline__content::before {
+    right: -10px;
+}
+
+.timeline__item:nth-child(even) .timeline__content::before {
+    left: -10px;
+}
+
+/* Technology Section */
+.technology__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.technology__card {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.technology__card:hover {
+    transform: translateY(-10px);
+}
+
+.technology__icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    padding: 1rem;
+    background-color: var(--background);
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.technology__card h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+/* Statistics Section */
+.statistics {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.statistics .section__title {
+    color: white;
+}
+
+.statistics__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.statistics__item h3 {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.statistics__item p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Team Section */
+.team__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.team__card {
+    text-align: center;
+}
+
+.team__card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    object-fit: cover;
+}
+
+.team__card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.team__card p {
+    color: var(--light-text);
+}
+
+/* Responsive Design for About Page */
+@media screen and (max-width: 968px) {
+    .about-hero__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .timeline::before {
+        left: 0;
+    }
+
+    .timeline__content {
+        width: calc(100% - 3rem);
+        margin-left: 3rem !important;
+        margin-right: 0 !important;
+    }
+
+    .timeline__content::before {
+        left: -10px !important;
+    }
+
+    .team__grid {
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .statistics__item h3 {
+        font-size: 2rem;
+    }
+
+    .team__card img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Features Hero Section */
+.features-hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    background-color: var(--light-background);
+}
+
+.features-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.features-hero__description {
+    font-size: 1.25rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+/* Core Features Section */
+.core-features__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card__icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feature-card__list {
+    list-style: none;
+}
+
+.feature-card__list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-card__list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Analysis Tools Section */
+.analysis-tools__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.tool-card {
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-10px);
+}
+
+.tool-card h3 {
+    padding: 1.5rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.tool-card p {
+    padding: 0 1.5rem 1.5rem;
+    color: var(--light-text);
+}
+
+.tool-card__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.tool-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Workflow Section */
+.workflow__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.workflow__steps {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.workflow__step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.workflow__number {
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.workflow__text h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.workflow__text p {
+    color: var(--light-text);
+}
+
+.workflow__image img {
+    border-radius: 1rem;
+}
+
+/* Integration Section */
+.integration__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.integration__card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.integration__card:hover {
+    transform: translateY(-10px);
+}
+
+.integration__card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.integration__card h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.integration__card p {
+    color: var(--light-text);
+}
+
+/* Responsive Design for Features Page */
+@media screen and (max-width: 968px) {
+    .features-hero__content,
+    .workflow__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .workflow__steps {
+        order: 2;
+    }
+
+    .workflow__image {
+        order: 1;
+    }
+
+    .workflow__step {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .core-features__grid,
+    .analysis-tools__grid,
+    .integration__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-card__image {
+        height: 160px;
+    }
+}
+
+/* BIM Hero Section */
+.bim-hero {
+    padding-top: calc(var(--header-height) + 4rem);
+    background-color: var(--light-background);
+}
+
+.bim-hero__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.bim-hero__description {
+    font-size: 1.25rem;
+    color: var(--light-text);
+    margin-bottom: 2rem;
+}
+
+/* BIM Fundamentals */
+.bim-fundamentals__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.bim-card {
+    padding: 2rem;
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    height: 100%;
+}
+
+.bim-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.bim-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.bim-list li {
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.bim-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* BIM Standards */
+.standards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.standards-card {
+    padding: 2rem;
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.standards-card:hover {
+    transform: translateY(-10px);
+}
+
+.standards-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.standards-card p {
+    color: var(--light-text);
+}
+
+/* BIM Workflow */
+.workflow-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.workflow-timeline::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: var(--primary-color);
+    left: 0;
+    top: 0;
+}
+
+.workflow-step {
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.workflow-step::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: var(--accent-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    left: -7px;
+    top: 0;
+}
+
+.workflow-content {
+    background-color: var(--light-background);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.workflow-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.workflow-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.workflow-content li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.workflow-content li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* BIM Tools */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.tool-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--light-background);
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tool-item:hover {
+    transform: translateY(-10px);
+}
+
+.tool-item img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.tool-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.tool-item p {
+    color: var(--light-text);
+}
+
+/* Call to Action */
+.cta {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.cta__content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cta__content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta__content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.cta .button--outline {
+    border-color: white;
+    color: white;
+}
+
+.cta .button--outline:hover {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+/* Responsive Design for BIM Page */
+@media screen and (max-width: 968px) {
+    .bim-hero__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .workflow-timeline {
+        padding-left: 1rem;
+    }
+
+    .cta__buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bim-fundamentals__grid,
+    .standards-grid,
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workflow-step {
+        padding-left: 1.5rem;
+    }
+} 

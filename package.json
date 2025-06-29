@@ -1,0 +1,27 @@
+{
+  "name": "revitpro",
+  "version": "1.0.0",
+  "description": "Professional static website for Autodesk Revit resources and training",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "npx http-server -p 8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "revit",
+    "bim",
+    "autodesk",
+    "architecture",
+    "engineering",
+    "construction"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "scrollreveal": "^4.0.9"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.8"
+  }
+} 

@@ -1,0 +1,1241 @@
+/* 1. General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0055A4;
+    --accent-color: #FFD700;
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --light-gray: #e0e0e0;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+/* 2. Typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+h1 { font-size: 2.25rem; } /* 36px */
+h2 { font-size: 1.75rem; } /* 28px */
+h3 { font-size: 1.5rem; }  /* 24px */
+p { font-size: 1rem; margin-bottom: 1rem; }
+
+/* 3. Layout */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+/* 4. Navigation */
+.navbar {
+    background: var(--white);
+    box-shadow: var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* 5. Hero Section */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(0, 85, 164, 0.9), rgba(0, 85, 164, 0.9)),
+                url('../images/revit-logo.png') center/cover;
+    color: var(--white);
+    text-align: center;
+    padding-top: 70px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 85, 164, 0.9), rgba(0, 85, 164, 0.7));
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 6. Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.875rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* 7. Cards */
+.card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* 8. Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* 9. Footer */
+.footer {
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 4rem 0;
+}
+
+.footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer a:hover {
+    color: var(--accent-color);
+}
+
+/* 10. Responsive Design */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        flex-direction: column;
+        padding: 1rem 0;
+        text-align: center;
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .feature-icon {
+        height: 150px;
+    }
+
+    .ad-container {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .grid-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* 11. Page Header */
+.page-header {
+    background: linear-gradient(rgba(0, 85, 164, 0.9), rgba(0, 85, 164, 0.9)),
+                url('../images/revit-logo.png') center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 8rem 0 4rem;
+}
+
+.page-header h1 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* 12. Content Sections */
+.content {
+    padding: 2rem 0;
+}
+
+.content h2 {
+    margin-bottom: 2rem;
+}
+
+.content p {
+    margin-bottom: 1.5rem;
+}
+
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.responsive-img:hover {
+    transform: scale(1.02);
+}
+
+/* 13. Statistics Cards */
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.stat-card {
+    background: var(--white);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.stat-card h3 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: var(--text-color);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* 14. Lists */
+.impact-list,
+.vision-list {
+    list-style: none;
+    margin: 1.5rem 0;
+}
+
+.impact-list li,
+.vision-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.impact-list li:before,
+.vision-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* 15. Background Utilities */
+.bg-light {
+    background-color: var(--background-color);
+}
+
+/* 16. Active Navigation */
+.nav-link.active {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+/* 17. Card Icons */
+.card-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+/* 18. Responsive Adjustments */
+@media (max-width: 768px) {
+    .impact-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        margin-bottom: 1rem;
+    }
+    
+    .page-header {
+        padding: 6rem 0 3rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-header p {
+        font-size: 1.1rem;
+    }
+}
+
+/* 19. Feature Cards */
+.feature-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.05);
+}
+
+.feature-card h3 {
+    margin-bottom: 1rem;
+}
+
+.feature-card .feature-list {
+    text-align: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.feature-card .feature-list li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.feature-card .feature-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* 20. Analysis Cards */
+.analysis-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.analysis-card:hover {
+    transform: translateY(-5px);
+}
+
+.analysis-card .feature-icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+.analysis-card h3 {
+    margin-bottom: 1rem;
+}
+
+.analysis-card p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* 21. Call to Action Section */
+.bg-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.cta-content {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.cta-content h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.btn-secondary {
+    background-color: var(--white);
+    color: var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+/* 22. Documentation Section */
+.doc-content {
+    padding: 2rem;
+}
+
+.doc-content h3 {
+    margin-bottom: 1.5rem;
+}
+
+.doc-content .feature-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.doc-content .feature-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.doc-content .feature-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* 23. Responsive Adjustments for Features */
+@media (max-width: 768px) {
+    .feature-card,
+    .analysis-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .cta-content {
+        padding: 3rem 0;
+    }
+    
+    .doc-content {
+        padding: 1rem;
+    }
+}
+
+/* 24. Benefit Cards */
+.benefit-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-card h3 {
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.benefit-card p {
+    color: var(--text-color);
+    margin: 0;
+}
+
+/* 25. Workflow Section */
+.workflow-diagram {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.workflow-step {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.workflow-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.workflow-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.workflow-list li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* 26. Standards Section */
+.standards-list {
+    list-style: none;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.standards-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+    font-weight: 500;
+}
+
+.standards-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* 27. Implementation Cards */
+.implementation-card {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+}
+
+.implementation-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.implementation-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.implementation-list li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.implementation-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* 28. Future Section */
+.future-content {
+    padding: 2rem;
+}
+
+.future-content h3 {
+    margin-bottom: 1.5rem;
+}
+
+/* 29. Responsive Adjustments for BIM Page */
+@media (max-width: 768px) {
+    .benefit-card,
+    .workflow-step,
+    .implementation-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .workflow-diagram {
+        margin-bottom: 2rem;
+    }
+    
+    .standards-content,
+    .future-content {
+        padding: 1rem;
+    }
+}
+
+/* 30. Ad Container */
+.ad-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    text-align: center;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+/* 31. Card Images */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+}
+
+/* 32. Hero Section Enhancement */
+.hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 85, 164, 0.9), rgba(0, 85, 164, 0.7));
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* 33. Feature Icons Enhancement */
+.feature-icon {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.feature-icon:hover {
+    transform: scale(1.05);
+}
+
+/* 34. Responsive Image Adjustments */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.responsive-img:hover {
+    transform: scale(1.02);
+}
+
+/* 35. Mobile Adjustments */
+@media (max-width: 768px) {
+    .card-image {
+        height: 150px;
+    }
+
+    .feature-icon {
+        height: 150px;
+    }
+
+    .ad-container {
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+}
+
+/* Gallery Page Styles */
+.project-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.project-info p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.project-category {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.category-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 1rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.category-card p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.highlight-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.highlight-list li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.highlight-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.submit-project {
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.submit-project h2 {
+    margin-bottom: 1rem;
+}
+
+.submit-project p {
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive Gallery Styles */
+@media (max-width: 768px) {
+    .grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .category-image {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .project-info {
+        padding: 1rem;
+    }
+}
+
+/* Tutorial Page Styles */
+.path-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.path-card:hover {
+    transform: translateY(-10px);
+}
+
+.path-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.path-content {
+    padding: 1.5rem;
+}
+
+.path-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.path-content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.path-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.path-list li {
+    padding: 0.3rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.path-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.tutorial-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.tutorial-card:hover {
+    transform: translateY(-5px);
+}
+
+.tutorial-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tutorial-content {
+    padding: 1.5rem;
+}
+
+.tutorial-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.tutorial-content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.duration {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.resource-list li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.resource-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+/* Responsive Tutorial Styles */
+@media (max-width: 768px) {
+    .path-image,
+    .tutorial-image {
+        height: 180px;
+    }
+
+    .path-content,
+    .tutorial-content {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .path-image,
+    .tutorial-image {
+        height: 160px;
+    }
+
+    .duration {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Certification Page Styles */
+.cert-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-10px);
+}
+
+.cert-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cert-content {
+    padding: 1.5rem;
+}
+
+.cert-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.cert-content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.cert-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.cert-list li {
+    padding: 0.3rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.cert-list li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.cert-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.prep-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.prep-list li {
+    padding: 0.5rem 0;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.prep-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+.benefit-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.benefit-card h3 {
+    padding: 1rem;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.benefit-card p {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.testimonial-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    padding: 1.5rem;
+}
+
+.testimonial-content p {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+    font-style: italic;
+}
+
+.testimonial-content cite {
+    display: block;
+    color: var(--primary-color);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* Responsive Certification Styles */
+@media (max-width: 768px) {
+    .cert-image,
+    .benefit-image,
+    .testimonial-image {
+        height: 180px;
+    }
+
+    .cert-content,
+    .testimonial-content {
+        padding: 1rem;
+    }
+
+    .cert-info {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cert-image,
+    .benefit-image,
+    .testimonial-image {
+        height: 160px;
+    }
+} 
