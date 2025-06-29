@@ -3,119 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="RevitPro - Your ultimate resource for Autodesk Revit expertise, tutorials, and professional development">
-    <title>RevitPro - Professional Autodesk Revit Solutions</title>
+    <meta name="description" content="RevitPro - Professional Revit and BIM solutions. Expert training, consulting, and advanced modeling for architecture and construction. Transform your projects with powerful BIM tools.">
+    <meta name="keywords" content="Revit, BIM, Autodesk Revit, 3D modeling, architecture software, building design, construction modeling, BIM software, architectural design, Revit training">
+    <meta name="author" content="RevitPro">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="RevitPro - Expert Revit & BIM Solutions">
+    <meta property="og:description" content="Transform your architectural projects with RevitPro. Professional Revit and BIM solutions for modern construction.">
+    <meta property="og:image" content="assets/images/revitpro-og.jpg">
+    <meta property="og:url" content="https://revitpro.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>RevitPro - Expert Revit & BIM Solutions | Professional 3D Modeling</title>
+    <link rel="canonical" href="https://revitpro.com">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Google Ads -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"></script>
 </head>
 <body>
     <header class="header">
         <nav class="nav container">
-            <a href="/" class="nav__logo">RevitPro</a>
+            <a href="/" class="nav__logo">
+                <i class="fas fa-building"></i>
+                RevitPro
+            </a>
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="/" class="nav__link active">Home</a></li>
-                    <li class="nav__item"><a href="/about.html" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="/features.html" class="nav__link">Features</a></li>
-                    <li class="nav__item"><a href="/bim-explained.html" class="nav__link">BIM</a></li>
-                    <li class="nav__item"><a href="/gallery.html" class="nav__link">Gallery</a></li>
-                    <li class="nav__item"><a href="/tutorials.html" class="nav__link">Tutorials</a></li>
-                    <li class="nav__item"><a href="/certification.html" class="nav__link">Certification</a></li>
-                    <li class="nav__item"><a href="/careers.html" class="nav__link">Careers</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                    <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
+                    <li class="nav__item"><a href="#articles" class="nav__link">Articles</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
                 <div class="nav__close" id="nav-close">
-                    <span class="material-icons">close</span>
+                    <i class="fas fa-times"></i>
                 </div>
             </div>
             <div class="nav__toggle" id="nav-toggle">
-                <span class="material-icons">menu</span>
+                <i class="fas fa-bars"></i>
             </div>
         </nav>
     </header>
 
     <main class="main">
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero section" id="home">
             <div class="hero__container container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Master Autodesk Revit with RevitPro</h1>
+                    <h1 class="hero__title">Transform Your Projects with Revit Excellence</h1>
                     <p class="hero__description">
-                        Elevate your BIM workflow with professional tools, comprehensive tutorials, and industry-leading expertise.
+                        Harness the power of Revit for advanced BIM modeling and revolutionize your architectural projects.
+                        The complete solution for construction professionals.
                     </p>
                     <div class="hero__buttons">
-                        <a href="/tutorials.html" class="button button--primary">Start Learning</a>
-                        <a href="/features.html" class="button button--outline">Explore Features</a>
+                        <a href="#contact" class="button button--primary">
+                            <i class="fas fa-rocket"></i> Get Started
+                        </a>
+                        <a href="#features" class="button button--outline">
+                            <i class="fas fa-info-circle"></i> Learn More
+                        </a>
                     </div>
                 </div>
                 <div class="hero__image">
-                    <img src="assets/images/hero-image.jpg" alt="Revit Professional Workspace">
+                    <img src="assets/images/hero-image.png" alt="Revit Professional Interface" class="hero__img">
                 </div>
             </div>
         </section>
 
-        <!-- Features Overview -->
-        <section class="features section">
+        <!-- About Section -->
+        <section class="about section" id="about">
             <div class="container">
-                <h2 class="section__title">Why Choose RevitPro?</h2>
-                <div class="features__grid">
-                    <div class="feature__card">
-                        <div class="feature__icon">
-                            <img src="assets/icons/professional.svg" alt="Professional">
+                <h2 class="section__title">Why Choose Revit?</h2>
+                <div class="about__container grid">
+                    <div class="about__content">
+                        <div class="about__data">
+                            <p class="about__description">
+                                Revit is the industry-leading software for BIM modeling in construction.
+                                It enables efficient collaboration, superior project visualization, and
+                                streamlined construction processes.
+                            </p>
+                            <ul class="about__list">
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Precise 3D Modeling & Detailing</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Real-time Collaboration</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Automated Documentation</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>Integrated Energy Analysis</span>
+                                </li>
+                            </ul>
                         </div>
-                        <h3 class="feature__title">Professional Excellence</h3>
-                        <p class="feature__description">Industry-standard tools and workflows trusted by professionals worldwide.</p>
-                    </div>
-                    <div class="feature__card">
-                        <div class="feature__icon">
-                            <img src="assets/icons/learning.svg" alt="Learning">
-                        </div>
-                        <h3 class="feature__title">Comprehensive Learning</h3>
-                        <p class="feature__description">Structured tutorials from basics to advanced BIM concepts.</p>
-                    </div>
-                    <div class="feature__card">
-                        <div class="feature__icon">
-                            <img src="assets/icons/certification.svg" alt="Certification">
-                        </div>
-                        <h3 class="feature__title">Certification Path</h3>
-                        <p class="feature__description">Guided preparation for Autodesk certification success.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Benefits Section -->
-        <section class="benefits section">
-            <div class="container">
-                <h2 class="section__title">Transform Your Revit Experience</h2>
-                <div class="benefits__content">
-                    <div class="benefits__text">
-                        <ul class="benefits__list">
-                            <li>Advanced BIM workflow optimization</li>
-                            <li>Real-world project experience</li>
-                            <li>Industry expert mentorship</li>
-                            <li>Career advancement opportunities</li>
-                        </ul>
-                        <a href="/about.html" class="button button--secondary">Learn More</a>
-                    </div>
-                    <div class="benefits__image">
-                        <img src="assets/images/benefits-image.jpg" alt="Revit Benefits">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Newsletter Section -->
-        <section class="newsletter section">
+        <!-- Features Section -->
+        <section class="features section" id="features">
             <div class="container">
-                <div class="newsletter__container">
-                    <h2 class="newsletter__title">Stay Updated with RevitPro</h2>
-                    <p class="newsletter__description">Get the latest Revit tips, tutorials, and industry insights delivered to your inbox.</p>
-                    <form class="newsletter__form">
-                        <input type="email" placeholder="Enter your email" class="newsletter__input">
-                        <button type="submit" class="button button--primary">Subscribe</button>
-                    </form>
+                <h2 class="section__title">Core Features</h2>
+                <div class="features__container grid">
+                    <div class="feature-card">
+                        <i class="fas fa-cube"></i>
+                        <h3>BIM Modeling</h3>
+                        <p>Create detailed 3D models with comprehensive building information</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Collaborative Work</h3>
+                        <p>Real-time collaboration with your team on projects</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Documentation</h3>
+                        <p>Automatically generate plans, sections, and technical documentation</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Analysis</h3>
+                        <p>Perform advanced energy and structural analysis</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Google Ads Display -->
+            <div class="container">
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                     data-ad-slot="YOUR_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </section>
+
+        <!-- Articles Section -->
+        <section class="articles section" id="articles">
+            <div class="container">
+                <h2 class="section__title">Latest Articles on Revit</h2>
+                <div class="articles__container grid">
+                    <article class="article-card">
+                        <img src="assets/images/article-bim.jpg" alt="What is BIM in Revit?" class="article__img">
+                        <div class="article__content">
+                            <h3 class="article__title">What is BIM in Revit? Understanding Building Information Modeling</h3>
+                            <p class="article__summary">Discover how Revit leverages Building Information Modeling (BIM) to streamline architectural design, improve collaboration, and enhance project outcomes. Learn why BIM is essential for modern construction workflows.</p>
+                            <a href="article-bim.html" class="article__link">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="assets/images/article-families.jpg" alt="Mastering Revit Families" class="article__img">
+                        <div class="article__content">
+                            <h3 class="article__title">Mastering Revit Families: Tips for Efficient Modeling</h3>
+                            <p class="article__summary">Learn how to create, customize, and manage Revit Families to boost your productivity. This guide covers best practices for parametric components and reusable content in Revit projects.</p>
+                            <a href="article-families.html" class="article__link">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="assets/images/article-collaboration.jpg" alt="Collaboration in Revit" class="article__img">
+                        <div class="article__content">
+                            <h3 class="article__title">Collaboration in Revit: Worksharing and Cloud Solutions</h3>
+                            <p class="article__summary">Explore how Revit's worksharing and cloud-based tools enable seamless collaboration among architects, engineers, and stakeholders, ensuring project success and data integrity.</p>
+                            <a href="article-collaboration.html" class="article__link">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="assets/images/article-automation.jpg" alt="Automating Tasks in Revit" class="article__img">
+                        <div class="article__content">
+                            <h3 class="article__title">Automating Tasks in Revit: Dynamo and Add-ins</h3>
+                            <p class="article__summary">Discover how to automate repetitive tasks in Revit using Dynamo scripts and powerful add-ins. Save time and reduce errors with automation in your BIM workflow.</p>
+                            <a href="article-automation.html" class="article__link">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                    <article class="article-card">
+                        <img src="assets/images/article-tips.jpg" alt="Top 10 Revit Tips for Beginners" class="article__img">
+                        <div class="article__content">
+                            <h3 class="article__title">Top 10 Revit Tips for Beginners</h3>
+                            <p class="article__summary">Start your Revit journey with these essential tips for beginners. Improve your modeling skills, avoid common mistakes, and become proficient in Revit faster.</p>
+                            <a href="article-tips.html" class="article__link">Read more <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats section">
+            <div class="container">
+                <div class="stats__container">
+                    <div class="stat__item">
+                        <i class="fas fa-building"></i>
+                        <h3>1000+</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat__item">
+                        <i class="fas fa-users"></i>
+                        <h3>500+</h3>
+                        <p>Satisfied Clients</p>
+                    </div>
+                    <div class="stat__item">
+                        <i class="fas fa-award"></i>
+                        <h3>10+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat__item">
+                        <i class="fas fa-star"></i>
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section__title">Contact Us</h2>
+                <div class="contact__container grid">
+                    <div class="contact__info">
+                        <div class="contact__card">
+                            <i class="fas fa-phone"></i>
+                            <h3>Phone</h3>
+                            <p>+227 96 38 08 77</p>
+                        </div>
+                        <div class="contact__card">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email</h3>
+                            <p>entreprise2rc@gmail.com</p>
+                        </div>
+                        <div class="contact__card">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Niger</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -126,26 +256,11 @@
             <div class="footer__content">
                 <div class="footer__brand">
                     <h3 class="footer__title">RevitPro</h3>
-                    <p class="footer__description">Your gateway to Revit excellence</p>
-                </div>
-                <div class="footer__links">
-                    <div class="footer__group">
-                        <h4 class="footer__subtitle">Quick Links</h4>
-                        <ul>
-                            <li><a href="/about.html">About Us</a></li>
-                            <li><a href="/features.html">Features</a></li>
-                            <li><a href="/tutorials.html">Tutorials</a></li>
-                            <li><a href="/contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__group">
-                        <h4 class="footer__subtitle">Resources</h4>
-                        <ul>
-                            <li><a href="/bim-explained.html">BIM Guide</a></li>
-                            <li><a href="/certification.html">Certification</a></li>
-                            <li><a href="/careers.html">Careers</a></li>
-                            <li><a href="/blog">Blog</a></li>
-                        </ul>
+                    <p class="footer__description">Your partner for BIM excellence</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>

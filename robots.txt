@@ -1,7 +1,21 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
+Allow: /about.html
+Allow: /features.html
+Allow: /bim-explained.html
+Allow: /gallery.html
+Allow: /tutorials.html
+Allow: /certification.html
+Allow: /careers.html
+Allow: /contact.html
 
-Sitemap: https://www.revitpro.com/sitemap.xml 
+Sitemap: https://revitpro.com/sitemap.xml
+
+# Allow crawling of all content
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+
+# Optimize crawling
+Crawl-delay: 10 
